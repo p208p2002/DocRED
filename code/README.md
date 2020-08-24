@@ -5,11 +5,20 @@ python3
 
 pytorch>=1.0
 
+unzip
+> apt install unzip
+
 ```
 pip3 install -r requirements.txt
 ```
 
 ## preprocessing data
+### auto init
+```
+sh init_dataset.sh
+```
+
+### monual download
 Download metadata from [TsinghuaCloud](https://cloud.tsinghua.edu.cn/d/99e1c0805eb64736af95/) or [GoogleDrive](https://drive.google.com/drive/folders/1Ri3LIILKKBi3aBJjUVCOBpGX5PpONHRK) for baseline method and put them into prepro_data folder.
 
 
