@@ -10,6 +10,10 @@ Multiple entities in a document generally exhibit complex inter-sentence relatio
 ## Codalab
 If you are interested in our dataset, you are welcome to join in the Codalab competition at [DocRED](https://competitions.codalab.org/competitions/20717)
 
+## Init
+```
+sh init_dataset.sh
+```
 
 ## Important
 Sorry, we have changed the computing method for Ignore  F1. The numbers in origin paper and Codalab link have been updated.
