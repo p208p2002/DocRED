@@ -2,3 +2,4 @@
 data/
 code/prepro_data/
 *__pycache__*
+code/log/
