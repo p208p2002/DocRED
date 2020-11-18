@@ -3,3 +3,8 @@ data/
 code/prepro_data/
 *__pycache__*
 code/log/
+checkpoint/
+fig_result/
+dev_dev_index.json
+*.fact
+evaluate_output/
