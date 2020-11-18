@@ -48,8 +48,9 @@ CUDA_VISIBLE_DEVICES=0 python3 test_sp.py --model_name LSTM_SP --save_name check
 
 dev result can evaluated by 
 ```
-python3 evalutaion result.json ../data/dev.json
+python3 evaluation.py ../data ../evaluate_output example.result.json
 ```
+> python3 evaluation.py [data dir] [ouput dir] [predict_json path]
 
 test result should be submit to Codalab.
 
