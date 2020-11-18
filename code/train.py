@@ -31,7 +31,8 @@ model = {
 }
 
 con = config.Config(args)
-con.set_max_epoch(200)
+con.set_max_epoch(2)
+con.set_test_epoch(2)
 con.load_train_data()
 con.load_test_data()
 # con.set_train_model()
