@@ -31,14 +31,17 @@ def gen_train_facts(data_file_name, truth_dir):
 
 input_dir = sys.argv[1]
 output_dir = sys.argv[2]
+predict_file_path = sys.argv[3]
 
-submit_dir = os.path.join(input_dir, 'res')
-truth_dir = os.path.join(input_dir, 'ref')
+submit_dir = os.path.join(input_dir, '')
+truth_dir = os.path.join(input_dir, '')
 
 if not os.path.isdir(submit_dir):
     print ("%s doesn't exist" % submit_dir)
-
+# print(os.path.isdir(submit_dir))
+# print(os.path.isdir(truth_dir))
 if os.path.isdir(submit_dir) and os.path.isdir(truth_dir):
+    
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -48,7 +51,7 @@ if os.path.isdir(submit_dir) and os.path.isdir(truth_dir):
     output_filename = os.path.join(output_dir, 'scores.txt')
     output_file = open(output_filename, 'w')
 
-    truth_file = os.path.join(truth_dir, "dev_test.json")
+    truth_file = os.path.join(truth_dir, "dev.json")
     truth = json.load(open(truth_file))
 
     std = {}
@@ -74,7 +77,7 @@ if os.path.isdir(submit_dir) and os.path.isdir(truth_dir):
 
     tot_relations = len(std)
 
-    submission_answer_file = os.path.join(submit_dir, "result.json")
+    submission_answer_file = predict_file_path
     tmp = json.load(open(submission_answer_file))
     tmp.sort(key=lambda x: (x['title'], x['h_idx'], x['t_idx'], x['r']))
     submission_answer = [tmp[0]]
